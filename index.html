@@ -1,93 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Imperial Fence Pros | Free Estimates</title>
-  <meta name="description" content="Top-rated fence installation and repair. Get a fast, free quote today. Residential & commercial fencing experts.">
-  <style>
-    body {font-family: Arial, sans-serif; margin:0; line-height:1.6;}
-    header {background:#111; color:#fff; padding:15px; position:sticky; top:0;}
-    nav {display:flex; justify-content:space-between; align-items:center; max-width:1100px; margin:auto;}
-    nav a {color:#fff; margin-left:20px; text-decoration:none;}
-    .hero {background:url('https://images.unsplash.com/photo-1598300188904-6287d52746d0') center/cover no-repeat; color:#fff; padding:100px 20px; text-align:center;}
-    .hero h1 {font-size:2.5rem; margin-bottom:10px;}
-    .btn {background:#c59d5f; color:#fff; padding:15px 25px; text-decoration:none; border-radius:5px; display:inline-block; margin-top:15px; font-weight:bold;}
-    .section {padding:50px 20px; max-width:1100px; margin:auto;}
-    .services {display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px;}
-    .card {border:1px solid #ddd; padding:20px; border-radius:10px; background:#fff;}
-    .reviews {background:#f9f9f9;}
-    .review {margin-bottom:20px;}
-    .cta {background:#222; color:#fff; text-align:center; padding:50px 20px;}
-    form {display:grid; gap:10px; max-width:500px; margin:auto;}
-    input, textarea {padding:12px; border:1px solid #ccc; border-radius:5px; width:100%;}
-    footer {background:#111; color:#fff; text-align:center; padding:20px;}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Imperial Fence Pros</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background: #111;
+    color: white;
+}
+
+header img {
+    height: 50px;
+}
+
+.hero {
+    background: url('images/hero.jpg') center/cover no-repeat;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    background: rgba(0,0,0,0.6);
+    padding: 20px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #c59d5f;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-  <nav>
-    <div><strong>Imperial Fence Pros</strong></div>
-    <div>
-      <a href="#services">Services</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
+    <img src="images/logo.png" alt="Imperial Fence Pros Logo">
+    <h2>Imperial Fence Pros</h2>
 </header>
 
 <section class="hero">
-  <h1>Get Your Fence Installed Fast & Done Right</h1>
-  <p>Licensed & Insured | Residential & Commercial | Free Estimates</p>
-  <a href="#contact" class="btn">Get Free Quote</a>
+    <div>
+        <h1>Quality Fencing Built to Last</h1>
+        <a href="#contact" class="btn">Get a Free Quote</a>
+    </div>
 </section>
 
 <section class="section">
-  <h2>Why Choose Us</h2>
-  <ul>
-    <li>✔ Fast turnaround times</li>
-    <li>✔ Competitive pricing</li>
-    <li>✔ Quality craftsmanship</li>
-    <li>✔ Experienced crew</li>
-  </ul>
-</section>
+    <h2>Our Services</h2>
+    <div class="services">
 
-<section class="section" id="services">
-  <h2>Our Services</h2>
-  <div class="services">
-    <div class="card"><h3>Wood Fencing</h3><p>Custom privacy and decorative fences.</p></div>
-    <div class="card"><h3>Vinyl Fencing</h3><p>Durable, clean, low-maintenance options.</p></div>
-    <div class="card"><h3>Aluminum & Steel</h3><p>Secure and elegant fencing solutions.</p></div>
-    <div class="card"><h3>Gates & Operators</h3><p>Manual & automatic gate installations.</p></div>
-  </div>
-</section>
+        <div class="card">
+            <img src="images/wood.jpg" alt="Wood Fence">
+            <h3>Wood Fencing</h3>
+        </div>
 
-<section class="section reviews" id="reviews">
-  <h2>What Our Customers Say</h2>
-  <div class="review">⭐️⭐️⭐️⭐️⭐️ "Great work, fast and professional!"</div>
-  <div class="review">⭐️⭐️⭐️⭐️⭐️ "Best fence company I've worked with."</div>
-</section>
+        <div class="card">
+            <img src="images/vinyl.jpg" alt="Vinyl Fence">
+            <h3>Vinyl Fencing</h3>
+        </div>
 
-<section class="cta">
-  <h2>Ready to Get Started?</h2>
-  <p>Call Now or Request Your Free Quote</p>
-  <a href="tel:5551234567" class="btn">Call Now</a>
+        <div class="card">
+            <img src="images/aluminum.jpg" alt="Aluminum Fence">
+            <h3>Aluminum Fencing</h3>
+        </div>
+
+    </div>
 </section>
 
 <section class="section" id="contact">
-  <h2>Get a Free Quote</h2>
-  <form action="https://formsubmit.co/info@imperialfencepros.com" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="tel" name="phone" placeholder="Phone Number" required>
-    <input type="email" name="email" placeholder="Email">
-    <textarea name="message" placeholder="Tell us about your project"></textarea>
-    <button type="submit" class="btn">Submit Request</button>
-  </form>
+    <h2>Contact Us</h2>
+    <p>Call or Text: (Your Phone Number)</p>
+    <p>Email: info@imperialfencepros.com</p>
 </section>
 
 <footer>
-  <p>© 2026 Imperial Fence Pros | Licensed & Insured</p>
+    <p>© 2026 Imperial Fence Pros</p>
 </footer>
 
 </body>
