@@ -8,62 +8,89 @@
 <style>
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f5f7fa;
 }
 
+/* HEADER */
 header {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     padding: 15px 30px;
-    background: #111;
+    background: rgba(0,0,0,0.8);
     color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
 }
 
 header img {
     height: 50px;
 }
 
+/* HERO */
 .hero {
-    background: url('images/hero.jpg') center/cover no-repeat;
-    height: 90vh;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('images/hero.jpg') center/cover no-repeat;
     display: flex;
-    align-items: center;
     justify-content: center;
-    color: white;
+    align-items: center;
     text-align: center;
+    color: white;
 }
 
 .hero h1 {
     font-size: 3rem;
-    background: rgba(0,0,0,0.6);
-    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
 }
 
 .btn {
-    display: inline-block;
     margin-top: 20px;
-    padding: 12px 25px;
+    padding: 14px 30px;
     background: #c59d5f;
+    border-radius: 30px;
     color: white;
     text-decoration: none;
     font-weight: bold;
+    display: inline-block;
 }
 
+/* SECTION */
 .section {
-    padding: 50px 20px;
+    padding: 80px 20px;
     text-align: center;
 }
 
+.section h2 {
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+/* SERVICES */
 .services {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
     justify-content: center;
+    gap: 30px;
 }
 
 .card {
     width: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
 }
 
 .card img {
@@ -72,10 +99,21 @@ header img {
     object-fit: cover;
 }
 
+.card h3 {
+    padding: 15px;
+}
+
+/* CTA */
+.cta {
+    background: linear-gradient(135deg, #c59d5f, #a67c3d);
+    color: white;
+    padding: 60px 20px;
+}
+
+/* FOOTER */
 footer {
     background: #111;
     color: white;
-    text-align: center;
     padding: 20px;
 }
 </style>
@@ -84,43 +122,49 @@ footer {
 <body>
 
 <header>
-    <img src="images/logo.png" alt="Imperial Fence Pros Logo">
+    <img src="images/logo.png">
     <h2>Imperial Fence Pros</h2>
 </header>
 
 <section class="hero">
     <div>
-        <h1>Quality Fencing Built to Last</h1>
-        <a href="#contact" class="btn">Get a Free Quote</a>
+        <h1>Premium Fencing That Lasts</h1>
+        <p>Residential & Commercial Fence Installation</p>
+        <a href="#contact" class="btn">Get Free Quote</a>
     </div>
 </section>
 
 <section class="section">
     <h2>Our Services</h2>
-    <div class="services">
 
+    <div class="services">
         <div class="card">
-            <img src="images/wood.jpg" alt="Wood Fence">
+            <img src="images/wood.jpg">
             <h3>Wood Fencing</h3>
         </div>
 
         <div class="card">
-            <img src="images/vinyl.jpg" alt="Vinyl Fence">
+            <img src="images/vinyl.jpg">
             <h3>Vinyl Fencing</h3>
         </div>
 
         <div class="card">
-            <img src="images/aluminum.jpg" alt="Aluminum Fence">
+            <img src="images/aluminum.jpg">
             <h3>Aluminum Fencing</h3>
         </div>
-
     </div>
+</section>
+
+<section class="cta">
+    <h2>Ready to Upgrade Your Property?</h2>
+    <p>Call us today for a fast, free estimate</p>
+    <a href="#contact" class="btn">Contact Us</a>
 </section>
 
 <section class="section" id="contact">
     <h2>Contact Us</h2>
-    <p>Call or Text: 321-345-8559</p>
-    <p>Email: imperialfencecorp@gmail.com</p>
+    <p>📞 321-345-8559</p>
+    <p>📧 imperialfencecorp.com</p>
 </section>
 
 <footer>
