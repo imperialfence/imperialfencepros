@@ -56,13 +56,14 @@ header h2 {
 
 /* BUTTON */
 .btn {
-    margin-top: 20px;
+    margin-top: 15px;
     padding: 14px 30px;
     background: #3d5fa8;
     border-radius: 30px;
     color: white;
     text-decoration: none;
     font-weight: bold;
+    display: inline-block;
 }
 
 /* SECTION */
@@ -133,31 +134,49 @@ header h2 {
     cursor: pointer;
 }
 
-/* REVIEWS */
-.reviews {
-    background: #eef2f7;
-}
-
-/* FORM */
-form input, form textarea {
-    width: 90%;
-    max-width: 400px;
-    padding: 12px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-}
-
-/* CTA */
-.cta {
-    background: linear-gradient(135deg, #0a2a66, #3d5fa8);
+/* SIDE QUOTE BUTTON */
+.quote-tab {
+    position: fixed;
+    left: 0;
+    top: 40%;
+    background: #0a2a66;
     color: white;
-    padding: 60px 20px;
+    padding: 15px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    cursor: pointer;
+    z-index: 1000;
 }
 
-/* FLOATING CALL BUTTON */
+/* POPUP FORM */
+.quote-popup {
+    position: fixed;
+    left: -350px;
+    top: 0;
+    width: 350px;
+    height: 100%;
+    background: white;
+    box-shadow: 5px 0 15px rgba(0,0,0,0.3);
+    padding: 20px;
+    transition: 0.3s;
+    z-index: 1001;
+}
+
+.quote-popup.active {
+    left: 0;
+}
+
+.quote-popup input,
+.quote-popup textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* FLOATING CALL BUTTON (MOVED UP) */
 .call-btn {
     position: fixed;
-    bottom: 20px;
+    bottom: 90px;
     right: 20px;
     background: #0a2a66;
     color: white;
@@ -165,7 +184,6 @@ form input, form textarea {
     border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     z-index: 1000;
 }
 
@@ -189,7 +207,6 @@ footer {
     <div>
         <h1>Premium Fencing That Lasts</h1>
         <p>Licensed & Insured | Residential & Commercial</p>
-        <a href="#contact" class="btn">Get Free Quote</a><br>
         <a href="tel:13213458559" class="btn">Call Now</a>
     </div>
 </section>
@@ -197,18 +214,9 @@ footer {
 <section class="section">
     <h2>Our Services</h2>
     <div class="services">
-        <div class="card">
-            <img src="images/wood.jpg">
-            <h3>Wood Fencing</h3>
-        </div>
-        <div class="card">
-            <img src="images/vinyl.jpg">
-            <h3>Vinyl Fencing</h3>
-        </div>
-        <div class="card">
-            <img src="images/aluminum.jpg">
-            <h3>Aluminum Fencing</h3>
-        </div>
+        <div class="card"><img src="images/wood.jpg"><h3>Wood</h3></div>
+        <div class="card"><img src="images/vinyl.jpg"><h3>Vinyl</h3></div>
+        <div class="card"><img src="images/aluminum.jpg"><h3>Aluminum</h3></div>
     </div>
 </section>
 
@@ -226,39 +234,30 @@ footer {
     <img id="lightbox-img">
 </div>
 
-<section class="section reviews">
-    <h2>Google Reviews</h2>
-    <a href="https://www.google.com/search?q=Imperial+Fence+Contractor" target="_blank" class="btn">
-        View Our Reviews
-    </a>
-</section>
+<!-- SIDE TAB -->
+<div class="quote-tab" onclick="toggleQuote()">Request Quote</div>
 
-<section class="section" id="contact">
-    <h2>Get a Free Quote</h2>
+<!-- POPUP FORM -->
+<div id="quotePopup" class="quote-popup">
+    <h3>Get a Quote</h3>
 
     <form action="https://formsubmit.co/imperialfencecorp@gmail.com,3213458559@vtext.com" method="POST">
-        
-        <input type="text" name="name" placeholder="Your Name" required><br><br>
-        <input type="email" name="email" placeholder="Your Email" required><br><br>
-        <input type="text" name="phone" placeholder="Phone Number"><br><br>
-        <textarea name="message" placeholder="Project details..." required></textarea><br><br>
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="phone" placeholder="Phone">
+        <textarea name="message" placeholder="Project details"></textarea>
+        <button class="btn">Submit</button>
 
-        <button type="submit" class="btn">Request Quote</button>
-
-        <input type="hidden" name="_subject" value="New Fence Lead">
         <input type="hidden" name="_captcha" value="false">
     </form>
-
-    <p><a href="tel:13213458559">📞 321-345-8559</a></p>
-    <p>📧 imperialfencecorp@gmail.com</p>
-</section>
+</div>
 
 <footer>
     <p>© 2026 Imperial Fence Pros</p>
 </footer>
 
-<!-- FLOATING CALL BUTTON -->
-<a href="tel:13213458559" class="call-btn">📞 Call Now</a>
+<!-- FLOATING CALL -->
+<a href="tel:13213458559" class="call-btn">📞 Call</a>
 
 <script>
 function openLightbox(img) {
@@ -268,6 +267,10 @@ function openLightbox(img) {
 
 function closeLightbox() {
     document.getElementById("lightbox").style.display = "none";
+}
+
+function toggleQuote() {
+    document.getElementById("quotePopup").classList.toggle("active");
 }
 </script>
 
