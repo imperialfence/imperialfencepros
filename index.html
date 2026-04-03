@@ -45,6 +45,7 @@ header img {
     font-size: 3rem;
 }
 
+/* BUTTON */
 .btn {
     margin-top: 20px;
     padding: 14px 30px;
@@ -60,10 +61,6 @@ header img {
 .section {
     padding: 80px 20px;
     text-align: center;
-}
-
-.section h2 {
-    margin-bottom: 40px;
 }
 
 /* SERVICES */
@@ -106,7 +103,6 @@ header img {
     object-fit: cover;
     border-radius: 12px;
     cursor: pointer;
-    transition: 0.3s;
 }
 
 .gallery img:hover {
@@ -151,7 +147,15 @@ header img {
     background: white;
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* FORM */
+form input, form textarea {
+    width: 90%;
+    max-width: 400px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
 }
 
 /* CTA */
@@ -222,31 +226,45 @@ footer {
     <img id="lightbox-img">
 </div>
 
-<!-- REVIEWS -->
+<!-- GOOGLE REVIEWS -->
 <section class="section reviews">
-    <h2>What Our Customers Say</h2>
+    <h2>Google Reviews</h2>
+    <p>See what our customers are saying:</p>
+
+    <a href="https://www.google.com/search?q=Imperial+Fence+Contractor" target="_blank" class="btn">
+        View Our Google Reviews
+    </a>
 
     <div class="review-card">
         ⭐⭐⭐⭐⭐  
-        <p>"Great work, fast and professional. Highly recommend Imperial Fence!"</p>
+        <p>"Great work, fast and professional. Highly recommend."</p>
     </div>
 
     <div class="review-card">
         ⭐⭐⭐⭐⭐  
-        <p>"Quality installation and excellent communication throughout the project."</p>
+        <p>"Very clean install and great communication."</p>
     </div>
 </section>
 
-<section class="cta">
-    <h2>Ready to Upgrade Your Property?</h2>
-    <p>Call us today for a fast, free estimate</p>
-    <a href="#contact" class="btn">Contact Us</a>
-</section>
-
+<!-- CONTACT FORM -->
 <section class="section" id="contact">
-    <h2>Contact Us</h2>
-    <p>📞 321-345-8559</p>
-    <p>📧 imperialfencecorp@gmail.com</p>
+    <h2>Get a Free Quote</h2>
+
+    <form action="https://formsubmit.co/imperialfencecorp@gmail.com" method="POST">
+        
+        <input type="text" name="name" placeholder="Your Name" required><br><br>
+        
+        <input type="email" name="email" placeholder="Your Email" required><br><br>
+        
+        <input type="text" name="phone" placeholder="Phone Number"><br><br>
+        
+        <textarea name="message" placeholder="Tell us about your project..." rows="5" required></textarea><br><br>
+
+        <button type="submit" class="btn">Request Quote</button>
+
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="New Fence Quote Request">
+    </form>
 </section>
 
 <footer>
