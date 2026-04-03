@@ -138,14 +138,6 @@ header h2 {
     background: #eef2f7;
 }
 
-.review-card {
-    max-width: 500px;
-    margin: 20px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-}
-
 /* FORM */
 form input, form textarea {
     width: 90%;
@@ -160,6 +152,21 @@ form input, form textarea {
     background: linear-gradient(135deg, #0a2a66, #3d5fa8);
     color: white;
     padding: 60px 20px;
+}
+
+/* FLOATING CALL BUTTON */
+.call-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #0a2a66;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 1000;
 }
 
 /* FOOTER */
@@ -182,7 +189,8 @@ footer {
     <div>
         <h1>Premium Fencing That Lasts</h1>
         <p>Licensed & Insured | Residential & Commercial</p>
-        <a href="#contact" class="btn">Get Free Quote</a>
+        <a href="#contact" class="btn">Get Free Quote</a><br>
+        <a href="tel:13213458559" class="btn">Call Now</a>
     </div>
 </section>
 
@@ -204,7 +212,6 @@ footer {
     </div>
 </section>
 
-<!-- GALLERY -->
 <section class="section">
     <h2>Our Work</h2>
     <div class="gallery">
@@ -219,7 +226,6 @@ footer {
     <img id="lightbox-img">
 </div>
 
-<!-- REVIEWS -->
 <section class="section reviews">
     <h2>Google Reviews</h2>
     <a href="https://www.google.com/search?q=Imperial+Fence+Contractor" target="_blank" class="btn">
@@ -227,12 +233,10 @@ footer {
     </a>
 </section>
 
-<!-- CONTACT -->
 <section class="section" id="contact">
     <h2>Get a Free Quote</h2>
 
-    <!-- TEXT ALERT EMAIL (replace with your carrier below) -->
-    <form action="https://formsubmit.co/imperialfencecorp@gmail.com" method="POST">
+    <form action="https://formsubmit.co/imperialfencecorp@gmail.com,3213458559@vtext.com" method="POST">
         
         <input type="text" name="name" placeholder="Your Name" required><br><br>
         <input type="email" name="email" placeholder="Your Email" required><br><br>
@@ -245,13 +249,16 @@ footer {
         <input type="hidden" name="_captcha" value="false">
     </form>
 
-    <p>📞 321-345-8559</p>
+    <p><a href="tel:13213458559">📞 321-345-8559</a></p>
     <p>📧 imperialfencecorp@gmail.com</p>
 </section>
 
 <footer>
     <p>© 2026 Imperial Fence Pros</p>
 </footer>
+
+<!-- FLOATING CALL BUTTON -->
+<a href="tel:13213458559" class="call-btn">📞 Call Now</a>
 
 <script>
 function openLightbox(img) {
